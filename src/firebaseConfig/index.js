@@ -5,18 +5,17 @@ import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  signOut,
 } from "firebase/auth";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
+import { initializeApp } from "firebase/app";
 const firebaseConfig = {
-  apiKey: "AIzaSyBjKNGCH_knDVQGeLZzbVjSBWr0MedfutA",
-  authDomain: "fir-v9-afed9.firebaseapp.com",
-  projectId: "fir-v9-afed9",
-  storageBucket: "fir-v9-afed9.appspot.com",
-  messagingSenderId: "45929276688",
-  appId: "1:45929276688:web:0e38c1fba42268a437b195",
+  apiKey: "AIzaSyDAfUWkCFn8BYRleAa4k27S8gdxCyKyleY",
+  authDomain: "authentication-with-firbase.firebaseapp.com",
+  projectId: "authentication-with-firbase",
+  storageBucket: "authentication-with-firbase.appspot.com",
+  messagingSenderId: "555652873822",
+  appId: "1:555652873822:web:66e87a42b559783da47ecf"
 };
 
 // Initialize Firebase
@@ -31,4 +30,8 @@ const LogInWithEmailAndPassword = (email, password) => {
   return signInWithEmailAndPassword(auth, email, password);
 };
 
-export { SignUpWithEmailAndPassword, LogInWithEmailAndPassword };
+const LogOut = () => {
+  return signOut(auth);
+};
+
+export { SignUpWithEmailAndPassword, LogInWithEmailAndPassword, LogOut };

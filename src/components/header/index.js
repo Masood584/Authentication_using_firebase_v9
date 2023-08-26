@@ -1,18 +1,37 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import React from "react";
-const header = {
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  height: "70px",
-  backgroundColor: "tomato",
-  color: "white",
-};
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
   return (
-    <Box sx={header} mb={10}>
-      <Typography variant="h2">Masood.Com</Typography>
+    <Box
+      height={70}
+      display={"flex"}
+      justifyContent={"space-between"}
+      alignItems={"center"}
+      backgroundColor={"#24B795"}
+      color={"white"}
+      padding={{ xs: " 0 1rem", sm: " 0 2rem" }}
+    >
+      <Typography variant="h4">Your Store </Typography>
+      <Box>
+        <Button
+          backgroundColor={"white"}
+          variant="contained"
+          size={"small"}
+          onClick={() => navigate("/login")}
+          sx={{
+            backgroundColor:"#000080",
+            textTransform:"capitalize",
+            "&:hover":{
+              backgroundColor:"#000080",
+            }
+          }}
+        >
+          Login
+        </Button>
+      </Box>
     </Box>
   );
 };

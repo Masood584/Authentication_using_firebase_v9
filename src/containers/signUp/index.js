@@ -47,7 +47,7 @@ const SignUp = () => {
             confirmButtonText: "cool",
             confirmButtonColor: "tomato",
           });
-          navigate("/");
+          navigate("/login");
           setInputValue({
             email: "",
             password: "",

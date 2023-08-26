@@ -40,7 +40,7 @@ const Login = () => {
           icon: "success",
           confirmButtonText: "welcome",
         });
-        navigate("/home");
+        navigate("/");
         setInputValue({
           email: "",
           password: "",
@@ -64,7 +64,7 @@ const Login = () => {
       <Container maxWidth={"xs"}>
         <Loader isloading={isloading} />
         <Box
-          mt={10}
+          mt={6}
           sx={{
             padding: "30px",
             borderRadius: "20px",
@@ -135,8 +135,8 @@ const Login = () => {
           >
             Login
           </Button>
-          <Typography mt={2} variant="body2">
-            If you are not sigup.
+          <Typography mt={2} variant="body2" textAlign={"center"}>
+            Do not have an account?
             <Button
             onClick={()=>navigate("/signup")}
               sx={{
